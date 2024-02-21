@@ -1,5 +1,4 @@
-// import axios from "./node_modules/axios";
-const axios = require("axios");
+import axios from "axios";
 axios.defaults.baseURL = "/api/v1";
 class BasicServices {
   constructor() {}
