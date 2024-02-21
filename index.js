@@ -6,7 +6,7 @@ class BasicServices {
     return await axios.get(url, { params }).data;
   }
   async getTaskList(params) {
-    let res = await axios.get("/fieldwork/tasks/list", { baseURL: "/api/v1" }, { params });
+    let res = await axios.get("/fieldwork/tasks/list", { params });
     return res.data;
   }
 }
