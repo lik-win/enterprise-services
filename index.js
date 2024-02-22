@@ -1,12 +1,12 @@
-import axios from "axios";
-axios.defaults.baseURL = "/api/v1";
 class BasicServices {
-  constructor() {}
+  constructor(axios) {
+    this.$ = axios;
+  }
   async getService(url, params) {
-    return await axios.get(url, { params }).data;
+    return await this.$.get(url, { params }).data;
   }
   async getTaskList(params) {
-    let res = await axios.get("/fieldwork/tasks/list", { params });
+    let res = await this.$.get("/fieldwork/tasks/list", { params });
     return res.data;
   }
 }
